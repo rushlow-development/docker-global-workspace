@@ -6,7 +6,7 @@ services:
             args:
                 - PHP_VERSION=7.4
         image: global_workspace:latest
-        container_name: global_8_workspace
+        container_name: global_workspace
         volumes:
             - ../:/var/htdocs
         tty: true
