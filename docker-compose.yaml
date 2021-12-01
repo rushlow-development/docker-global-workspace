@@ -1,23 +1,29 @@
 version: '3.7'
 services:
     workspace:
-        build:
-            context: ./workspace
-            args:
-                - PHP_VERSION=7.4
-        image: global_workspace:latest
-        container_name: global_workspace
+        image: 'rushlowdev/php-cli:8.0-cli'
+        container_name: global_workspace_8_0
         volumes:
-            - ../:/var/htdocs
+            -   ../:/var/htdocs
         tty: true
-    
-    workspace-8:
-        build:
-            context: ./workspace-8
-            args:
-                - PHP_VERSION=8.0
-        container_name: global_8_workspace
-        image: global_8_workspace:latest
-        volumes:
-            - ../:/var/htdocs
-        tty: true
+#    workspace-74:
+#        build:
+#            context: ./workspace
+#            args:
+#                - PHP_VERSION=7.4
+#        image: global_workspace:latest
+#        container_name: global_workspace
+#        volumes:
+#            - ../:/var/htdocs
+#        tty: true
+#
+#    workspace-8:
+#        build:
+#            context: ./workspace-8
+#            args:
+#                - PHP_VERSION=8.0
+#        container_name: global_8_workspace
+#        image: global_8_workspace:latest
+#        volumes:
+#            - ../:/var/htdocs
+#        tty: true
